@@ -6,6 +6,7 @@ using UnityEngine.VR.WSA.Input;
 public class CannonBehavior : MonoBehaviour {
     public float ForceMagnitude = 300f;
     private GestureRecognizer _gestureRecognizer;
+    public GameObject GazeCursor;
 
 	// Use this for initialization
 	void Start () {
@@ -31,5 +32,19 @@ public class CannonBehavior : MonoBehaviour {
         rigidBody.position = transform.position;
         rigidBody.AddForce(transform.forward * ForceMagnitude);
     }
+
+    private void Update()
+    {
+        if (GazeCursor == null) return;
+        //RayCast definition here is generally not recommended
+        var raycastHits = Physics.RaycastAll(transform.position, transform.forward); //Assign the transform
+        var firstHit = raycastHits.OrderBy(raycastHits => r.distance).FirstOrDefault(); //Use rayCastHit for the closest object
+        //Position and orient correctly according to the surface
+        //Apply point of ray caster as a tranform position for gaze
+        GazeCursor.transform.position = firstHit.point;
+        GazeCursor.transform.forward = firstHit.normal;
+   
+    }
+pdate()
 
 }
