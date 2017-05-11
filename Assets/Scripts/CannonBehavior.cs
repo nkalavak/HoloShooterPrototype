@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.VR.WSA.Input;
 
@@ -38,13 +39,10 @@ public class CannonBehavior : MonoBehaviour {
         if (GazeCursor == null) return;
         //RayCast definition here is generally not recommended
         var raycastHits = Physics.RaycastAll(transform.position, transform.forward); //Assign the transform
-        var firstHit = raycastHits.OrderBy(raycastHits => r.distance).FirstOrDefault(); //Use rayCastHit for the closest object
+        var firstHit = raycastHits.OrderBy(r => r.distance).FirstOrDefault(); //Use rayCastHit for the closest object
         //Position and orient correctly according to the surface
         //Apply point of ray caster as a tranform position for gaze
         GazeCursor.transform.position = firstHit.point;
         GazeCursor.transform.forward = firstHit.normal;
-   
     }
-pdate()
-
 }
