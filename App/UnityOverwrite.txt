@@ -5,11 +5,11 @@
 # Write a line equal to 'overwrite-all' (without quotes) to overwrite everything (preserved accross builds)
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
-HololensUnite16.sln: 51C9D3A6BF14EAB174A3BB79448C80D3
+HololensUnite16.sln: 09DE7D4C54285874A1071097DDB5AAAF
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 GeneratedProjects\UWP\Assembly-CSharp-firstpass\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 HololensUnite16\App.cs: 79ABED03A2EA9B08F7D3830889BB0368
-HololensUnite16\HololensUnite16.csproj: DFBC166BF62D76792725425B5CED070E
+HololensUnite16\HololensUnite16.csproj: A9C36173750121BFF1E8B8CAF172E939
 HololensUnite16\HololensUnite16.csproj.user: BEFB8AC4886C4CFDD3C68445D6F19B04
 HololensUnite16\Package.appxmanifest: 9C973CE967A34EC8F4B78F4DC5687FCC
 HololensUnite16\project.json: 1D02BC64BAC0D041019673A1C4C51737
